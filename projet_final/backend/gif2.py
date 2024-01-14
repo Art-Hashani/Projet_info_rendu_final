@@ -27,10 +27,10 @@ def create_gif_from_folder(folder_path, gif_path, duration=500, loop=0):
 
 if __name__ == "__main__":
     # Chemin d'accès au dossier contenant les images PNG
-    folder_path = "/home/noe/Documents/projet_final/backend"
+    folder_path = "https://github.com/Art-Hashani/Projet_info_rendu_final/blob/c2df7684f548a7520a6034ff451ee502b10d060d/"
 
     # Chemin d'accès pour le fichier GIF de sortie
-    gif_output_path = "/home/noe/Documents/projet_final/frontend/output.gif"
+    gif_output_path = "https://github.com/Art-Hashani/Projet_info_rendu_final/blob/c2df7684f548a7520a6034ff451ee502b10d060d/output.gif"
 
 
     # Durée de chaque image en millisecondes (500 par défaut)

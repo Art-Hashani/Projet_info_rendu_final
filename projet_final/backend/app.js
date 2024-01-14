@@ -10,7 +10,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'C:/Users/adeni/Downloads/projet_test_der/projet_test/backend/')));
+app.use(express.static(path.join(__dirname, 'https://github.com/Art-Hashani/Projet_info_rendu_final/blob/c2df7684f548a7520a6034ff451ee502b10d060d/')));
 
 app.post('/sort', (req, res) => {
   const inputData = req.body.inputValues.split(' ').map(Number);
