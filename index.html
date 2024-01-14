@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>visualisation de tri</title>
+  <link rel="stylesheet" href="https://github.com/Art-Hashani/Projet_info_rendu_final/blob/c2df7684f548a7520a6034ff451ee502b10d060d/tri.css">
+  <style>
+    /* Ajoutez du style CSS pour l'affichage des éléments si nécessaire */  
+    
+  </style>
+</head>
+<body>
+  <label for="sortingType">Choisir le type de tri :</label>
+  <select id="sortingType">
+    <option value="bubble">Tri à bulles</option>
+    <option value="dichotomy">Tri par dichotomie</option>
+    <option value="quick">Tri rapide</option>
+    <option value="insert">Tri par insertion</option>
+    <option value="pairimpair">Tri Pair/Impair</option>
+    <option value="peigne">Tri par peigne</option>
+    <option value="fusion">Tri par fusion</option>
+    <option value="tas">Tri par tas</option>
+    <option value="selection">Tri par sélection</option>
+    <option value="cocktail">Tri cocktail</option>
+    <option value="shell">Tri de shell</option>
+    <option value="gnome">Tri gnome</option>
+  </select>
+  <br><br>
+
+
+  <form id="valuesForm">
+    <label for="inputValues">Entrez les valeurs séparées par des espaces :</label><br>
+    <input type="text" id="inputValues" name="inputValues"><br><br>
+    <button type="button" onclick="sortValues()">Trier</button>
+  </form>
+  <div id="visualization">
+    <!-- C'est ici que la visualisation du tri à bulles apparaîtra -->
+  </div>
+
+
+  <script src="https://github.com/Art-Hashani/Projet_info_rendu_final/blob/c2df7684f548a7520a6034ff451ee502b10d060d/script.js"></script>
+  <br><br>
+  
+
+  <button onclick="toggleGIF()">Afficher/Cacher le GIF</button>
+
+  
+  <script>
+  function toggleGIF() {
+    // Récupérer l'élément image par son id
+    var GIF = document.getElementById('GIF');
+    
+    // Chemin vers le fichier GIF
+    var cheminDuFichierGIF = 'https://github.com/Art-Hashani/Projet_info_rendu_final/blob/c2df7684f548a7520a6034ff451ee502b10d060d/output.gif';
+    
+    // Vérifier si l'élément et le fichier existent
+    if (GIF && cheminDuFichierGIF) {
+      // Actualiser l'URL de la source avec le timestamp ou la chaîne aléatoire
+      
+      // Si l'image est cachée, afficher l'élément et définir la source
+      if (GIF.style.display === 'none') {
+        GIF.src = cheminDuFichierGIF;
+        GIF.style.display = 'block';
+      } else {
+        // Sinon, cacher l'élément et réinitialiser la source
+        GIF.style.display = 'none';
+        GIF.src = '';
+      }
+    }
+  }
+  </script>
+  <br><br>
+  <!-- L'élément image avec l'id 'GIF' -->
+  <center>
+    <img id="GIF" src="" alt="">
+  </center>
+</body>
+</html>
